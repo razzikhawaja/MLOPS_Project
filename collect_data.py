@@ -1,6 +1,7 @@
 import requests
 import csv
 from datetime import datetime
+import pandas as pd
 
 API_KEY = "40e9023b9bfc845acd0d58fea31360de"
 CITY = "London"
@@ -34,3 +35,9 @@ def save_to_csv(data, filename="raw_data.csv"):
 if __name__ == "__main__":
     weather_data = fetch_weather_data()
     save_to_csv(weather_data)
+
+    # Load the CSV into a pandas DataFrame
+    df = pd.read_csv("raw_data.csv")
+    
+    # Print the columns to verify
+    print("Columns in the dataset:", df.columns)
