@@ -5,7 +5,7 @@ def preprocess_data(input_file="raw_data.csv", output_file="processed_data.csv")
     # Read the raw data
     df = pd.read_csv(input_file)
 
-    # Handle missing values
+    # Handle missing values by forward filling
     df.fillna(method="ffill", inplace=True)
 
     # Ensure that the columns exist before processing
@@ -17,12 +17,12 @@ def preprocess_data(input_file="raw_data.csv", output_file="processed_data.csv")
         )
     else:
         print("Error: Required numerical columns are missing.")
+        return
 
     # Optionally, you might want to keep the weather condition as it is (not scaled)
-    # If you want to perform any other processing on the weather condition, you can do it here.
-
     # Save the processed data to a new file
     df.to_csv(output_file, index=False)
+    print(f"Processed data saved to {output_file}")
 
 if __name__ == "__main__":
     preprocess_data()
