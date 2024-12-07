@@ -1,11 +1,16 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
+import logging
 
 # Import your functions
 from collect_data import fetch_weather_data, save_to_csv
 from preprocess_data import preprocess_data
+
+# Define file paths
+RAW_DATA_FILE = "/home/shehryar/airflow/MLOPS_Project/raw_data.csv"
+PROCESSED_DATA_FILE = "/home/shehryar/airflow/MLOPS_Project/processed_data.csv"
 
 # Define default arguments
 default_args = {
@@ -20,16 +25,21 @@ dag = DAG(
     'mlops_weather_pipeline',
     default_args=default_args,
     description='A simple weather data pipeline',
-    schedule_interval=None,  # Can be set to run periodically like '0 0 * * *' for daily runs
+    schedule_interval=timedelta(hours=2),  # Schedule to run every 2 hours
+    catchup=False,  # Avoid running past scheduled runs if the DAG is started late
 )
 
 # Define the tasks
 def collect_data_task():
+    logging.info("Starting data collection...")
     weather_data = fetch_weather_data()
-    save_to_csv(weather_data)
-    
+    save_to_csv(weather_data, filename=RAW_DATA_FILE)
+    logging.info("Data collection completed.")
+
 def preprocess_data_task():
-    preprocess_data(input_file="raw_data.csv", output_file="processed_data.csv")
+    logging.info("Starting data preprocessing...")
+    preprocess_data(input_file=RAW_DATA_FILE, output_file=PROCESSED_DATA_FILE)
+    logging.info("Data preprocessing completed.")
 
 # Task 1: Data Collection
 data_collection_task = PythonOperator(
