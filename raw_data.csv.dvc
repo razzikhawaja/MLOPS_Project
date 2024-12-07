@@ -1,5 +1,10 @@
 outs:
+<<<<<<< HEAD
 - md5: 29c639533b1a10ce8b01e74555e633b9
   size: 736
+=======
+- md5: e3fbfbd4cdf127af1d81d9d7bea5749a
+  size: 57
+>>>>>>> b4fab914650fc872040b0343c21c72838308dd66
   hash: md5
   path: raw_data.csv

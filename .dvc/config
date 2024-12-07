@@ -1,6 +1,14 @@
 [core]
+<<<<<<< HEAD
     remote = gdrive_remote
 ['remote "gdrive_remote"']
     url = gdrive://1Ani3IPi6XGx_cAlQnyQa2NbeFyGuq7sm
     gdrive_use_service_account = true
     gdrive_service_account_json_file_path = ../dvc.json
+=======
+    remote = myremote
+['remote "myremote"']
+    url = gdrive://1UlLN9yqhwLTXoPcka-Zwhzc2g669EjMM
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = C:/Users/Ammad Khawaja/Desktop/MLOPS_Project/dvc.json
+>>>>>>> b4fab914650fc872040b0343c21c72838308dd66

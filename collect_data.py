@@ -24,6 +24,7 @@ def fetch_weather_data():
 
 def save_to_csv(data, filename="raw_data.csv"):
     header = ["date_time", "temperature", "humidity", "wind_speed", "weather_condition"]
+<<<<<<< HEAD
     file_exists = False
     
     # Check if the file exists
@@ -39,11 +40,29 @@ def save_to_csv(data, filename="raw_data.csv"):
         if not file_exists:
             writer.writeheader()  # Write header only when creating the file
         writer.writerows(data)
+=======
+    try:
+        with open(filename, "a") as f:
+            writer = csv.DictWriter(f, fieldnames=header)
+            writer.writerows(data)  # Writing multiple rows
+    except FileNotFoundError:
+        with open(filename, "w") as f:
+            writer = csv.DictWriter(f, fieldnames=header)
+            writer.writeheader()
+            writer.writerows(data)
+>>>>>>> b4fab914650fc872040b0343c21c72838308dd66
 
 if __name__ == "__main__":
     weather_data = fetch_weather_data()
     save_to_csv(weather_data)
 
+<<<<<<< HEAD
     # Load the CSV into a pandas DataFrame to verify columns
     df = pd.read_csv("raw_data.csv")
+=======
+    # Load the CSV into a pandas DataFrame
+    df = pd.read_csv("raw_data.csv")
+    
+    # Print the columns to verify
+>>>>>>> b4fab914650fc872040b0343c21c72838308dd66
     print("Columns in the dataset:", df.columns)
