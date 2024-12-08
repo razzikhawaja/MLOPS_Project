@@ -7,7 +7,7 @@ amqp==5.3.1
 annotated-types==0.7.0
 antlr4-python3-runtime==4.9.3
 anyio==3.7.1
-apache-airflow==2.10.3
+apache-airflow==2.10.2
 apache-airflow-providers-common-compat==1.2.2
 apache-airflow-providers-common-io==1.4.2
 apache-airflow-providers-common-sql==1.20.0
@@ -225,6 +225,7 @@ typer==0.15.1
 typing_extensions==4.12.2
 tzdata==2024.2
 uc-micro-py==1.0.3
+unicodecsv==0.14.1
 universal_pathlib==0.2.5
 uritemplate==4.1.1
 urllib3==2.2.3
