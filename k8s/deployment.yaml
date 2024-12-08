@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-flask-app
+spec:
+  replicas: 1  # Adjust for scaling
+  selector:
+    matchLabels:
+      app: my-flask-app
+  template:
+    metadata:
+      labels:
+        app: my-flask-app
+    spec:
+      containers:
+      - name: my-flask-app
+        image: shehryarlodhi/my-flask-app:latest  # Replace with your Docker Hub image
+        ports:
+        - containerPort: 5000  # Port Flask is exposed on inside container
