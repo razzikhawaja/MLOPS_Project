@@ -10,8 +10,8 @@ stages:
     outs:
     - path: raw_data.csv
       hash: md5
-      md5: 3c612a21666cbf87cba411ba430e9197
-      size: 287
+      md5: d6360cdd52ef2b3b4133c36f252748e0
+      size: 291
   preprocess_data:
     cmd: python preprocess_data.py
     deps:
@@ -21,20 +21,20 @@ stages:
       size: 1083
     - path: raw_data.csv
       hash: md5
-      md5: 3c612a21666cbf87cba411ba430e9197
-      size: 287
+      md5: d6360cdd52ef2b3b4133c36f252748e0
+      size: 291
     outs:
     - path: processed_data.csv
       hash: md5
-      md5: cb4c56730a7ee9c1df969bc28a868bae
-      size: 508
+      md5: 8c2d9de39bce1260cce8aa91fb0d4a06
+      size: 507
   train_model:
     cmd: python train_model.py
     deps:
     - path: processed_data.csv
       hash: md5
-      md5: cb4c56730a7ee9c1df969bc28a868bae
-      size: 508
+      md5: 8c2d9de39bce1260cce8aa91fb0d4a06
+      size: 507
     - path: train_model.py
       hash: md5
       md5: 5e36457b3be52826bdade2f6db92ebbe
@@ -42,5 +42,5 @@ stages:
     outs:
     - path: model.pkl
       hash: md5
-      md5: ac536b47d82b40df331c3d4609653ea4
-      size: 547
+      md5: 6479af12bf598c4cc41ee4f720384c30
+      size: 599

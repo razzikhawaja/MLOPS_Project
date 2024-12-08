@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3ed7696e08054f64aa6f928aa7a3f46d/artifacts
+end_time: 1733651467354
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3ed7696e08054f64aa6f928aa7a3f46d
+run_name: languid-kite-853
+run_uuid: 3ed7696e08054f64aa6f928aa7a3f46d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733651462201
+status: 3
+tags: []
+user_id: shehryar
