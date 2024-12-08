@@ -3,7 +3,7 @@ name: CD Pipeline for Flask Project
 on:
   push:
     branches:
-      - prod  # Trigger on merge to the prod branch
+      - Prod  # Trigger on merge to the prod branch
 
 jobs:
   deploy:
