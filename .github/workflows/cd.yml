@@ -42,8 +42,13 @@ jobs:
       run: |
         # Set up kubectl to point to Minikube
         kubectl config use-context minikube
-        # Apply Kubernetes deployment and service files
+        # Apply Kubernetes deployment file
         kubectl apply -f k8s/deployment.yaml
+        
+        # Check if the service already exists, delete if necessary
+        kubectl get service my-flask-app-service && kubectl delete service my-flask-app-service || echo "Service does not exist"
+        
+        # Apply the Kubernetes service file to expose the deployment
         kubectl apply -f k8s/service.yaml
 
     - name: Expose application (Optional)
