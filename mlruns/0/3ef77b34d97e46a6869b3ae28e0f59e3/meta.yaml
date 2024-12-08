@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3ef77b34d97e46a6869b3ae28e0f59e3/artifacts
+end_time: 1733646583929
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3ef77b34d97e46a6869b3ae28e0f59e3
+run_name: calm-bird-279
+run_uuid: 3ef77b34d97e46a6869b3ae28e0f59e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733646578796
+status: 3
+tags: []
+user_id: shehryar

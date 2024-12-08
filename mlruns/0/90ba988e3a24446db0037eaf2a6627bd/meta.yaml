@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/90ba988e3a24446db0037eaf2a6627bd/artifacts
+end_time: 1733648437266
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 90ba988e3a24446db0037eaf2a6627bd
+run_name: abrasive-bug-829
+run_uuid: 90ba988e3a24446db0037eaf2a6627bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733648430335
+status: 3
+tags: []
+user_id: shehryar

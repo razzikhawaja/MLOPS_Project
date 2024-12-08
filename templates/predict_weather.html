@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Weather</h1>
+
+        <form method="POST">
+            <label for="humidity">Humidity (%):</label>
+            <input type="text" id="humidity" name="humidity" required><br><br>
+
+            <label for="wind_speed">Wind Speed (km/h):</label>
+            <input type="text" id="wind_speed" name="wind_speed" required><br><br>
+
+            <label for="weather_condition">Weather Condition:</label>
+            <input type="text" id="weather_condition" name="weather_condition" placeholder="e.g., clear, light rain, heavy rain, snow" required><br><br>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction %}
+        <h2>Prediction Result:</h2>
+        <p>The predicted weather  is: {{ prediction }}</p>
+        {% endif %}
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

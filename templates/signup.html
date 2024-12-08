@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sign Up - Weather Prediction App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="form-container">
+    <div class="container">
         <h1>Sign Up</h1>
         <form method="POST">
-            <label for="username">Username</label>
-            <input type="text" name="username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" name="password" required>
-            
-            <button type="submit">Sign Up</button>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Sign Up">
         </form>
+
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
     </div>
 </body>
 </html>
