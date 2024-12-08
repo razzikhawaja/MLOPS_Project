@@ -38,7 +38,6 @@ jobs:
 
     - name: Build Docker image
       run: |
-        cd MLOPS_Project  # Make sure we are in the right directory
         docker build -t my-flask-app .  # Build Docker image from Dockerfile
 
     - name: Push Docker image to DockerHub
