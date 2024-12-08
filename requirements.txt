@@ -6,7 +6,7 @@ alembic==1.14.0
 amqp==5.3.1
 annotated-types==0.7.0
 antlr4-python3-runtime==4.9.3
-anyio==4.6.0
+anyio==3.7.1
 apache-airflow==2.10.3
 apache-airflow-providers-common-compat==1.2.2
 apache-airflow-providers-common-io==1.4.2
