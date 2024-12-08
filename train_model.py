@@ -1,31 +1,38 @@
-import pandas as pd
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
+import mlflow
+import mlflow.sklearn
 import pickle
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
 
-def load_and_train_model(csv_file="processed_data.csv", model_file="model.pkl"):
-    # Load the processed data directly from the CSV file
-    data = pd.read_csv(csv_file)
+def train_model(X_train, X_test, y_train, y_test):
+    # Set the experiment name
+    mlflow.set_experiment("Weather-Temperature-Prediction")
 
-    # Prepare features (X) and target (y)
-    X = data[['humidity', 'wind_speed', 'weather_condition']]  # You can modify this to include other features
-    y = data['temperature']
-    
-    # Convert categorical 'weather_condition' to numerical (using one-hot encoding)
-    X = pd.get_dummies(X, columns=['weather_condition'], drop_first=True)
-    
-    # Split the data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    
-    # Train the model
-    model = LinearRegression()
-    model.fit(X_train, y_train)
-    
-    # Save the trained model as a pickle file
-    with open(model_file, 'wb') as f:
-        pickle.dump(model, f)
-    
-    print(f"Model trained and saved as {model_file}")
+    # Start an MLFlow run
+    with mlflow.start_run():
+        # Define the model (Random Forest Regressor for example)
+        model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-if __name__ == "__main__":
-    load_and_train_model()  # Call the function to train the model
+        # Train the model
+        model.fit(X_train, y_train)
+
+        # Make predictions
+        predictions = model.predict(X_test)
+        mse = mean_squared_error(y_test, predictions)
+
+        # Log model parameters
+        mlflow.log_param("n_estimators", 100)
+        mlflow.log_param("random_state", 42)
+
+        # Log model metrics
+        mlflow.log_metric("mse", mse)
+
+        # Log and register the trained model
+        mlflow.sklearn.log_model(model, "random_forest_model")
+
+        # Save the model locally
+        with open('model.pkl', 'wb') as f:
+            pickle.dump(model, f)
+
+        print(f"Model saved with MSE: {mse}")
+        return model
