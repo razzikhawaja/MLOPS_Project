@@ -1,3 +1,4 @@
+/dvc.json
 /raw_data.csv
 /processed_data.csv
-/dvc.json
+/model.pkl
