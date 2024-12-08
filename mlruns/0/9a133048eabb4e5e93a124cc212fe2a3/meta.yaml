@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9a133048eabb4e5e93a124cc212fe2a3/artifacts
+end_time: 1733642281859
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9a133048eabb4e5e93a124cc212fe2a3
+run_name: defiant-sow-130
+run_uuid: 9a133048eabb4e5e93a124cc212fe2a3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733642277973
+status: 4
+tags: []
+user_id: shehryar

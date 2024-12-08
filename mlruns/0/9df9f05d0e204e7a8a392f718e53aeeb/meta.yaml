@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9df9f05d0e204e7a8a392f718e53aeeb/artifacts
+end_time: 1733644163207
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9df9f05d0e204e7a8a392f718e53aeeb
+run_name: suave-gull-579
+run_uuid: 9df9f05d0e204e7a8a392f718e53aeeb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733644156982
+status: 3
+tags: []
+user_id: shehryar

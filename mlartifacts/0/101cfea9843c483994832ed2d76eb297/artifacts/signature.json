@@ -1,0 +1,1 @@
+{"inputs": "[{\"type\": \"double\", \"name\": \"humidity\", \"required\": true}, {\"type\": \"double\", \"name\": \"wind_speed\", \"required\": true}]", "outputs": "[{\"type\": \"double\", \"name\": \"temperature\", \"required\": true}]", "params": null}

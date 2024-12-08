@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/7745569349424ba19df23312b13cb50a/artifacts
+end_time: 1733641625437
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7745569349424ba19df23312b13cb50a
+run_name: puzzled-quail-910
+run_uuid: 7745569349424ba19df23312b13cb50a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733641616478
+status: 4
+tags: []
+user_id: shehryar

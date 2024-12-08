@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/65ad1ef1923e4b4199511d66775db9a9/artifacts
+end_time: 1733644042580
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 65ad1ef1923e4b4199511d66775db9a9
+run_name: carefree-lynx-625
+run_uuid: 65ad1ef1923e4b4199511d66775db9a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733644036837
+status: 3
+tags: []
+user_id: shehryar

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a0375094cde54ffc899ad96bc2080153/artifacts
+end_time: 1733641955407
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a0375094cde54ffc899ad96bc2080153
+run_name: rumbling-bird-5
+run_uuid: a0375094cde54ffc899ad96bc2080153
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733641950400
+status: 4
+tags: []
+user_id: shehryar

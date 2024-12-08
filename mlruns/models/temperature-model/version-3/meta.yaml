@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1733643227515
+current_stage: None
+description: ''
+last_updated_timestamp: 1733643227515
+name: temperature-model
+run_id: 2c143f3a69f343b581e1bd6046988289
+run_link: ''
+source: mlflow-artifacts:/0/2c143f3a69f343b581e1bd6046988289/artifacts/temperature_model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/0/2c143f3a69f343b581e1bd6046988289/artifacts/temperature_model
+user_id: null
+version: 3

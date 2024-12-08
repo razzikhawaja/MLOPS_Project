@@ -1,0 +1,30 @@
+artifact_path: temperature_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 2.18.0
+model_size_bytes: 8974
+model_uuid: 9420e08a8e7a4da484ff2ef06ccc6504
+run_id: 2c143f3a69f343b581e1bd6046988289
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "humidity", "required": true}, {"type": "double",
+    "name": "wind_speed", "required": true}]'
+  outputs: '[{"type": "double", "name": "temperature", "required": true}]'
+  params: null
+utc_time_created: '2024-12-08 07:33:43.519902'
