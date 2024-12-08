@@ -34,11 +34,12 @@ jobs:
     - name: Run tests
       run: |
         . venv/bin/activate
-        pytest || exit 0  # Continue on failure and make sure the pipeline doesn't fail due to test errors
+        pytest  # or any other testing framework you are using
 
     - name: Build Docker image
       run: |
-        docker build -t my-flask-app .
+        cd MLOPS_Project  # Make sure we are in the right directory
+        docker build -t my-flask-app .  # Build Docker image from Dockerfile
 
     - name: Push Docker image to DockerHub
       run: |
