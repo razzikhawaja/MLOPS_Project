@@ -51,7 +51,12 @@ jobs:
         # Apply the Kubernetes service file to expose the deployment
         kubectl apply -f k8s/service.yaml
 
-    - name: Expose application (Optional)
+    - name: Expose application
       run: |
+        # Check if the service exists, and delete it if it does
+        kubectl get service my-flask-app-service && kubectl delete service my-flask-app-service || echo "Service does not exist"
+          
+        # Expose the deployment again
         kubectl expose deployment my-flask-app --type=LoadBalancer --name=my-flask-app-service
         kubectl get services my-flask-app-service
+      
